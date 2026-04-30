@@ -78,6 +78,12 @@ Review episodes:
 .atris/state/task_episodes.jsonl
 ```
 
+Goal file:
+
+```text
+atris/goals.md
+```
+
 Headless CLI:
 
 ```bash
@@ -87,9 +93,25 @@ atris task finish <task_id> --proof "tests passed" --as codex --json
 atris task sync --dry-run --business-id <business_id> --json
 ```
 
+## Self-Improvement Loop
+
+```text
+goal
+  -> task
+  -> claim
+  -> proof
+  -> review reward
+  -> lesson
+  -> next task
+```
+
+That is the core loop.
+
+Every useful task should leave enough signal for the next agent to do a sharper task.
+
 ## Read Next
 
 - [`tasks.md`](tasks.md) - full task system spec
+- [`examples/goals.md`](examples/goals.md) - goals file that tasks can map against
 - [`examples/task.projection.json`](examples/task.projection.json) - UI projection example
 - [`examples/task_episode.jsonl`](examples/task_episode.jsonl) - RL/eval episode example
-
