@@ -1,0 +1,95 @@
+# Atris Tasks
+
+The work primitive for Atris.
+
+Atris Tasks turns work into a durable contract that humans, agents, desktop apps, cloud teams, Swarlo, and RL evaluators can all understand.
+
+```text
+Plan -> Do -> Review -> Done
+```
+
+This repo is the public spec and product surface.
+
+The working implementation currently lives in [`atris-cli`](https://github.com/atrislabs/atris).
+
+## What A Task Is
+
+A task is not just a checkbox.
+
+It is a small work room with:
+
+- a goal
+- an owner or agent
+- a thread
+- an event trace
+- proof
+- review
+- a lesson
+- the next task
+
+## System Shape
+
+```text
+atris-cli
+  -> SQLite task DB
+  -> CLI commands
+  -> projection JSON
+  -> cloud sync plan
+
+Atris Desktop
+  -> Command Center
+  -> task board
+  -> voice and chat entry points
+
+Swarlo
+  -> live leases
+  -> heartbeat
+  -> worker presence
+
+Atris Cloud
+  -> shared company task truth
+  -> collaboration
+  -> sync across machines
+
+RL / eval layer
+  -> task episodes
+  -> proof
+  -> reward
+  -> trajectory data
+```
+
+## Current Contract
+
+Local source of truth:
+
+```text
+~/.atris/tasks.db
+```
+
+UI projection:
+
+```text
+.atris/state/tasks.projection.json
+```
+
+Review episodes:
+
+```text
+.atris/state/task_episodes.jsonl
+```
+
+Headless CLI:
+
+```bash
+atris task new "Ship the task board" --tag ui --json
+atris task next --as codex --json
+atris task finish <task_id> --proof "tests passed" --as codex --json
+atris task sync --dry-run --business-id <business_id> --json
+```
+
+## Read Next
+
+- [`tasks.md`](tasks.md) - full task system spec
+- [`examples/task.projection.json`](examples/task.projection.json) - UI projection example
+- [`examples/task_episode.jsonl`](examples/task_episode.jsonl) - RL/eval episode example
+

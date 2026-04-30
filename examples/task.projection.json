@@ -1,0 +1,90 @@
+{
+  "schema": "atris.task_projection.v1",
+  "generated_at": "2026-04-30T09:00:00.000Z",
+  "workspace_root": "/workspace/example",
+  "goals": {
+    "source_path": "atris/goals.md",
+    "items": [
+      "Make tasks the atomic unit of work for humans and agents"
+    ]
+  },
+  "streams": [
+    {
+      "objective": "Make tasks the atomic unit of work for humans and agents",
+      "task_ids": ["01TASKEXAMPLE000000000000"],
+      "active_count": 1,
+      "done_count": 0,
+      "open_count": 0,
+      "doing_count": 1,
+      "blocked_count": 0,
+      "review_count": 0
+    }
+  ],
+  "tasks": [
+    {
+      "id": "01TASKEXAMPLE000000000000",
+      "title": "Wire task lifecycle into the desktop command center",
+      "status": "claimed",
+      "tag": "ui",
+      "workspace_root": "/workspace/example",
+      "claimed_by": "codex",
+      "created_at": 1777530000000,
+      "updated_at": 1777530300000,
+      "done_at": null,
+      "metadata": {},
+      "current_version": 2,
+      "latest_event_type": "claimed",
+      "objective": "Make the current task owner and state obvious to the operator.",
+      "review": {
+        "reward": null,
+        "proof": null,
+        "lesson": null,
+        "next_task": null
+      },
+      "lineage": {
+        "parent_task_id": null,
+        "parent_title": null,
+        "child_task_ids": [],
+        "child_titles": [],
+        "next_task_suggestion": null
+      },
+      "messages": [
+        {
+          "version": 1,
+          "actor": "human",
+          "content": "Show me who is doing what.",
+          "created_at": 1777530000000
+        }
+      ],
+      "events": [
+        {
+          "event_id": "01EVENTCREATE00000000000",
+          "task_id": "01TASKEXAMPLE000000000000",
+          "version": 1,
+          "workspace_root": "/workspace/example",
+          "actor": "human",
+          "event_type": "created",
+          "payload": {
+            "title": "Wire task lifecycle into the desktop command center",
+            "tag": "ui",
+            "status": "open"
+          },
+          "created_at": 1777530000000
+        },
+        {
+          "event_id": "01EVENTCLAIM000000000000",
+          "task_id": "01TASKEXAMPLE000000000000",
+          "version": 2,
+          "workspace_root": "/workspace/example",
+          "actor": "codex",
+          "event_type": "claimed",
+          "payload": {
+            "claimed_by": "codex"
+          },
+          "created_at": 1777530300000
+        }
+      ]
+    }
+  ]
+}
+

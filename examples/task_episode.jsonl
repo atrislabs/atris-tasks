@@ -1,0 +1,2 @@
+{"schema":"atris.task_episode.v1","episode_id":"01EVENTREVIEW0000000000","task_id":"01TASKEXAMPLE000000000000","workspace_root":"/workspace/example","created_at":"2026-04-30T09:10:00.000Z","state":{"title":"Wire task lifecycle into the desktop command center","status":"done","tag":"ui","claimed_by":"codex","metadata":{}},"action":{"event_type":"reviewed","actor":"human","version":4},"reward":{"value":1,"source":"task_review"},"lesson":"Visible ownership makes agent work easier to trust.","proof":"typecheck and build passed","next_task_suggestion":"Add voice task creation"}
+
