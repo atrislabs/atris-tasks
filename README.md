@@ -117,3 +117,14 @@ Every useful task should leave enough signal for the next agent to do a sharper 
 - [`examples/goals.md`](examples/goals.md) - goals file that tasks can map against
 - [`examples/task.projection.json`](examples/task.projection.json) - UI projection example
 - [`examples/task_episode.jsonl`](examples/task_episode.jsonl) - RL/eval episode example
+
+## Atris ecosystem
+
+| Repo | What |
+|------|------|
+| [atris](https://github.com/atrislabs/atris) | CLI + task DB implementation |
+| [member](https://github.com/atrislabs/member) | Agent team member spec |
+| [app.md](https://github.com/atrislabs/app.md) | Agent-runnable app manifest |
+| [swarlo](https://github.com/atrislabs/swarlo) | Coordination protocol |
+
+Agents: [`FOR_AGENTS.md`](FOR_AGENTS.md)
