@@ -1,5 +1,7 @@
 # Atris Tasks
 
+[![GitHub stars](https://img.shields.io/github/stars/atrislabs/atris-tasks?style=social)](https://github.com/atrislabs/atris-tasks/stargazers)
+
 The work primitive for Atris.
 
 Atris Tasks turns work into a durable contract that humans, agents, desktop apps, cloud teams, Swarlo, and RL evaluators can all understand.
